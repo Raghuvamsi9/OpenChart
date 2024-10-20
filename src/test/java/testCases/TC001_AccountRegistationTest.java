@@ -18,10 +18,11 @@ import pageObjects.HomePage;
 import testBase.BaseClass;
 
 public class TC001_AccountRegistationTest extends BaseClass{
-    @Parameters({"os","browser"})
+  //  @Parameters({"os","browser"})
     @Test(groups = {"Sanity","Master"})// master means all test cases
     public void AccountRegistationTest()
     {
+    //logs are provide the information of the application what the application done internally during run time
     logger.info("***** starting TC001_AccountRegistation_Test*****");
     // in case there is exception try and catch block is executes
     try {

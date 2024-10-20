@@ -18,6 +18,8 @@ public class HomePage  extends BasePage{
 	@FindBy(xpath = "//a[text()='Login']")
 	WebElement clicklogin;
 	
+	@FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Logout']")
+	WebElement clicklogout;
 public void accountbutton() 
 {
 		
@@ -31,5 +33,9 @@ public void registerbutton()
 public void loginbutton() {
 	
 	clicklogin.click();
+}
+public void logoutbutton() {
+	
+	clicklogout.click();
 }
 }

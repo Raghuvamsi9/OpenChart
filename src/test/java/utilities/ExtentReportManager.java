@@ -80,7 +80,8 @@ public  void onStart(ITestContext testcontext)
 			//new BaseClass() here base class create new object, inside object have new webdiver in order to match this webdriver we put baseclass webdriver is static
 			String imgPath=new BaseClass().captureScreen(result.getName());// ontestfailure method is triggered then capture screenshot method is executes
 			test.addScreenCaptureFromPath(imgPath); // this imgpath is attached screenshot to report
-		} catch (Exception e1) {
+		} 
+		catch (Exception e1) {
 			e1.printStackTrace();
 		}
 		

@@ -38,7 +38,7 @@ public class BaseClass {
 	  public Logger logger;
 	  public Properties p;
 	  @Parameters({"os","browser"})
-	    @BeforeClass(groups= {"sanity","Regression","Master"})
+	    @BeforeClass(groups= {"Sanity","Regression","Master"})
 		public void setUp(String os,String browser) throws Throwable
 {   
 		    //loading properties file
@@ -101,7 +101,7 @@ public class BaseClass {
 			driver.manage().window().maximize();
 	  }
 
-	    @AfterClass(groups= {"sanity","Regression","Master"})
+	    @AfterClass(groups= {"Sanity","Regression","Master"})
 		public void tearDown()
 		{   
 			driver.quit();
@@ -130,7 +130,7 @@ public class BaseClass {
 	    	String timeStamp=new SimpleDateFormat("yyyymmddhhmmss").format(new Date());
 	    	TakesScreenshot takesScreenShot=(TakesScreenshot)driver;
 	    	File sourceFile=takesScreenShot.getScreenshotAs(OutputType.FILE);
-	    	String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\"+tname+"_"+timeStamp;
+	    	String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\"+tname+"_"+timeStamp+"_"+".jpg";
 	    	File targetFile=new File(targetFilePath);
 	    	sourceFile.renameTo(targetFile);
 			return targetFilePath;// this return  will send screenshot to report otherwise it was in screenshot folder
